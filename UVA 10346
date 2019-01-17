@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n, k,reback, total;
+    while(scanf("%d%d", &n, &k)==2){
+        total= n;
+        while (n>=k) {
+
+        reback = n/k;
+        total  = total + reback;
+        n = reback +(n % k);
+        }
+            cout <<total <<endl;
+    }
+
+    return 0;
+}
+
